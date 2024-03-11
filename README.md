@@ -1,6 +1,13 @@
 RISC-V GNU Compiler Toolchain
 =============================
 
+### rcore configuration
+```bash
+git clone git@github.com:agh-riscv/riscv-gnu-toolchain.git
+./configure --prefix=/opt/riscv_24_01_11 --with-arch=rv32i --with-abi=ilp32
+make -j $(nproc)
+```
+
 This is the RISC-V C and C++ cross-compiler. It supports two build modes:
 a generic ELF/Newlib toolchain and a more sophisticated Linux-ELF/glibc
 toolchain.
