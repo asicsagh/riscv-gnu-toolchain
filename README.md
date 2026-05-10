@@ -3,8 +3,10 @@ RISC-V GNU Compiler Toolchain
 
 ### rcore configuration
 ```bash
-git clone git@github.com:agh-riscv/riscv-gnu-toolchain.git
-./configure --prefix=/opt/riscv_25_06_23 --with-arch=rv32i_zicsr --with-abi=ilp32
+git clone git@github.com:asicsagh/riscv-gnu-toolchain.git
+
+mkdir -p build
+./configure --prefix=$(pwd)/build/riscv_$(date +%y_%m_%d) --with-arch=rv32i_zicsr --with-abi=ilp32
 make -j $(nproc)
 ```
 
